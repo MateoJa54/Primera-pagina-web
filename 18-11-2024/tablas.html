@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tablas.css">
+    <title>Tablas</title>
+
+</head>
+<body>
+    <header>
+        <h1>Tablas</h1>
+        <p>El uso de la etiqueta <em>tabla</em>, es para le evío y recepción de la información</p>
+    </header>
+    <section>
+        <article>
+            <table frame="void" rules= "rows" border="3px" cellpadding="10px" cellspacing="0px"><!-- Espaciado -->
+                <caption align="submit">Lista de estudiantes</caption><!-- Titulo de tabla -->
+                <colgroup>
+                    <col style="background-color:white">
+                    <col style="background-color:azure" >
+                </colgroup>
+                <thead><!-- Encabezado en tabla -->
+                    <tr><!-- Fila -->
+                        <th  align="center" width="300px"> Nombre </th> <!-- campos --> <!-- colspan para unir celdas -->
+                        <th> Apellidos </th>
+                        <th> Direccion </th>
+                        <th> Telefono </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td> Mateo</td>
+                        <td> Iza</td>
+                        <td>Quito</td>
+                        <td>0985228533</td>
+                    </tr>
+                    <tr>
+                        <td>Mateo</td>
+                        <td> Iza</td>
+                        <td>Quito</td>
+                        <td>0985228533</td>
+                    </tr>
+                    <tr>
+                        <td>Mateo</td>
+                        <td> Iza</td>
+                        <td>Quito</td>
+                        <td>0985228533</td>
+                    </tr>
+                    <tr>
+                        <td>Mateo</td>
+                        <td> Iza</td>
+                        <td>Quito</td>
+                        <td>0985228533</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <td> sum </td>
+                    <td> sum </td>
+                    <td> sum </td>
+                    <td> total </td>
+            </table>
+            <br>
+            <table border="3px" cellpadding="10px" cellspacing="0px">
+                <thead><!-- Encabezado en tabla -->
+                    <tr><!-- Fila -->
+                        <th  align="center"> Nombre </th> <!-- campos --> <!-- colspan para unir celdas -->
+                        <th> Apellidos </th>
+                        <th> Direccion </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="5">Mateo</td>
+                        <td> Iza</td>
+                        <td rowspan="5">Quito</td>
+                    </tr>
+
+                    <tr>
+                        <td> Iza</td>
+                    </tr>
+                    <tr>
+
+                        <td> Iza</td>
+                    </tr>
+                    <tr>
+                        <td> Iza</td>
+                    </tr>
+                    <tr>
+                        <td> Iza</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <laber>Ejemplo</laber>
+                <form action="submit" method="post">
+                    <br>
+                    <laber>Nombres:</laber>
+                    <input type="text" id="texnombres" minlength="5" maxlength="20" placeholder="nombres">
+                    <br>
+                    <laber>Apellidos</laber>
+                    <input type="text" id="texapellidos" placeholder="apellido">
+                    <br>
+                    <laber>Password</laber>
+                    <input type="password" id="texapellidos" placeholder="password">
+                    <br>
+                    <select id="cb">
+                        <option value="estudiante">Estudiante</option>
+                        <option value="docente">Docente</option>
+                        <option value="administrativo">Administrativo</option>
+                    </select>
+                    <br>
+                    <label>Observacion</label>
+                    <textarea name="taObservacion"></textarea>
+                    <br><br>
+                    <button class="boton" id="fontboton">Enviar Datos</button>
+        
+                </form>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
