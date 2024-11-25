@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+}
+body{
+    background-color: #cccccc;
+}
+
+header{
+    background-color: rgb(182, 77, 228);
+}
+.section1{
+    height: 400px;
+    background-color: #000;
+    background-image: url(angular.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.section2{
+    background-image: url(bg.png);
+    height: 400px;
+}
+.section3{
+    height: 500px;
+    background-image: url(angularfondo.jpg);
+    background-size: 100%;
+    background-attachment: fixed;  /*esta imagen es fija */
+}
+
+.section4{
+    height: 1000px;
+}
