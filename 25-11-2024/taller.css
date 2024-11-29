@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+}
+.container {
+    background-color: white; 
+    height: 100%;
+}
+h2 {
+    font-size: 20px;
+}
+aside {
+    margin-right: 220px;
+    margin-top: 100px;
+    position: absolute; 
+    right: 20px; 
+    top: 150px; 
+    width: 300px; 
+    text-align: center;
+    border: 6px solid #f0f0d2;
+    background-color: #f5fdf0;
+    height: auto;
+}
+.a{
+    margin-top: 180px;
+    margin-left: 60px;
+    position: absolute;  
+    text-align: center;
+    border: 6px solid #0400e8;
+    background-color:#0400e8;
+    height: auto;
+}
+.b{
+    margin-top: 310px;
+    margin-left: 60px;
+    position: absolute;  
+    text-align: center;
+    border: 6px solid #0400e8;
+    background-color:#0400e8;
+    height: auto;
+}
+header {
+    text-align: center;
+    background-color: #2e20f4;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav {
+    margin-top: 20px;
+    background-color: #5551d9;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navegacion {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+#cuadro {
+    border: 2px solid rgb(255, 255, 255);
+    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.Cuerpo {
+    border: 2px solid blue;
+    border-radius: 5%;
+    height: 400px;
+    width: 40%;
+    margin: 100px;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+.cuerpoflex {
+    display: flex;
+}
+.cuerpoflex div {
+    height: 50px;
+}
+.item-1 {
+    flex: 3 3 100px;
+    background-color: rgb(255, 255, 255);
+}
+.item-2 {
+    margin-left: 20px;
+    flex: 1 1 100px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px;
+}
+.item-2 img {
+    display: block;
+}
+.t1 {
+    font-size: 20px;
+    border-top: 50px;
+    position: static;
+}
+
+@media (max-width: 768px) {
+    .cuerpoflex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-1, .item-2 {
+        flex: none;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .item-2 img {
+        display: block;
+        margin: 0 auto;
+    }
+}
