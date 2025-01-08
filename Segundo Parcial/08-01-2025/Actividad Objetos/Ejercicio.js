@@ -31,22 +31,24 @@ Object.seal(inventario);
 // Implementa una función para vender un producto:
 
 function venderProduct(nombre, cantidad) {
-    for(let clave in inventario){
+    let productoEncontrado = false; // Bandera para verificar si el producto existe
+    for (let clave in inventario) {
         if (inventario[clave].nombre === nombre) {
-            if (inventario[clave].cantidad > cantidad) {
-                inventario[clave.cantidad] =  inventario[clave.cantidad] - cantidad;
-                console.log('Venta realizada con exito:' + cantidad + ' '+ nombre+'s');
-                return;
-              } else {
-                console.log('El stock es insuficiente de : ' + nombre);
-                return;
-              } 
-        }else{
-            console.log('No tenemos este producto');
-            return;
+            productoEncontrado = true; // Producto encontrado
+            if (inventario[clave].cantidad >= cantidad) {
+                inventario[clave].cantidad -= cantidad; // Actualizar cantidad
+                console.log(`Venta realizada con éxito: ${cantidad} ${nombre}(s).`);
+            } else {
+                console.log(`Stock insuficiente de ${nombre}. Solo quedan ${inventario[clave].cantidad} disponibles.`);
+            }
+            return; // Salir de la función tras encontrar el producto
         }
     }
+    if (!productoEncontrado) {
+        console.log(`No tenemos este producto: ${nombre}`);
+    }
 }
+
 
 // Implementa una función para aplicar un descuento a todos los productos:
 function descuento(descuento) {
@@ -68,7 +70,7 @@ function descuento(descuento) {
 
 
 venderProduct('Tomate', 11); 
-venderProduct('Tomate', 10); 
+venderProduct('Azucar', 10); 
 
 descuento(10);
 
