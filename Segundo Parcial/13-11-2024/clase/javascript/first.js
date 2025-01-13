@@ -10,7 +10,7 @@ let z = x + y;
 console.log(z);
 
 //var declara una variable global
-//let declara una variablee local o tambien una variable de bloqueç
+//let declara una variable local o tambien una variable de bloqueç
 //conts declara una variable que no va a cambiar su valor 
 
 //if marca un bloque de instrucciones que se ejecutan si una condicion se cumple 
@@ -63,7 +63,7 @@ let let3 = false;
 console.log(typeof let3);
 
 let let4 = BigInt(123);
-console.log(typeof let4);
+console.log(let4);
 
 let let5 = [1,2,3,4,5,,8,9];
 console.log(typeof let5);

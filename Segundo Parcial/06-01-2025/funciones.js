@@ -1,4 +1,4 @@
-//*****************Arreglos*************
+//*****************Funciones*************
 //Funcion declarar
 
 function miFuncion(a,b,c) {
