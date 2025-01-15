@@ -18,12 +18,12 @@ class Producto {
     constructor(nombre, precio, categoria, inventario) {
         if (precio < 0) {
             console.error("Error: No se pueden ingresar precios negativos.");
-            return; // Detenemos la creación del objeto retornando 'undefined'
+            return; 
         }
 
         if (inventario < 0) {
             console.error("Error: No se puede ingresar un inventario negativo.");
-            return; // Detenemos la creación del objeto retornando 'undefined'
+            return; 
         }
 
         this.idProducto = ++Producto.contadorProductos;
