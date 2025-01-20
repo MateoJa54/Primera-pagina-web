@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Juan">
+        <br>
+        Apellido: <input type="text" name="apellido" value="Iza">
+        <br>
+        Correo: <input type="email" name="correo" value="mateoiza664@gamil.com">
+        <br>
+    </form>
+
+    <button id="btnMostar" onclick="mostarValores()" type="submit">mostar</button>
+    <br>
+<div id="valores">
+
+</div>
+    <script>
+        function mostarValores(){
+            let formulario = document.forms['formulario'];
+            let texto = '';
+            for(const element of formulario){
+                texto += element.value + '<br>';
+
+            }
+            document.getElementById('valores').innerHTML = texto;
+            let nombre = formulario['nombre'];
+            let apellido = formulario['apellido'];
+            let correo = formmulario['correo'];
+
+            texto = nombre.value + '<br>' + apellido.value + '<br>' + correo.value;
+            document.getElementById('valores'). innerHTML = texto;
+
+        }
+    </script>
+</body>
+</html>

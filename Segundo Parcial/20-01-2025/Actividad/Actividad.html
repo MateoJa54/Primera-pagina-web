@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+</head>
+<body>
+        <button type="button" onclick="cambiarImagen()">Mostrar</button>
+        <br>
+        <img id="imagen" src="dos.jpg" alt="imagen" width="300">
+        <script>
+            const img = [
+                'four.jpg',
+                'pri.webp',
+                'tres.jpg',
+            ];
+    
+            let indice = -1; // Índice inicial fuera de la función
+    
+            function cambiarImagen() {
+                indice = (indice + 1) % img.length; // Incrementa el índice de forma circular
+                document.getElementById('imagen').src = img[indice]; // Cambia la imagen
+            }
+    
+            // Cambia la imagen automáticamente cada 3 segundos
+            setInterval(cambiarImagen, 3000);
+        </script>
+</body>
+
+</html>

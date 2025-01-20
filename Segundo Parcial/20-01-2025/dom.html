@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo" class="title">Manejo de DOM con Js</h1>
+    <h1 id="titulo2" class="title">manejo de DOM con Js2</h1>
+    <button id="btnMostar" onclick="mostar()" type="submit">mostar</button>
+    <br>
+    <div id="Valores">
+
+    </div>
+    <img src="1.jpg" alt="imagen" id="imagen">
+    <script>
+        document.write('Saludos desde Write!');
+        function mostar(){
+            /*let elementos = document.getElementsByClassName('title');
+            for(const element of elementos){ 
+                element.innerHTML = '<br> Nuevo titulo';
+            }*/
+
+            document.getElementById('imagen').src = "2.jpg";
+        }
+    </script>
+</body>
+</html>
