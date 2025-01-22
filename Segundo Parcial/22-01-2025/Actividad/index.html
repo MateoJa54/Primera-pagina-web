@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control Interactivo</title>
+</head>
+<body>
+    <h1 id="tituloPrincipal">Título de la Página</h1>
+
+    <button id="botonPanel">Mostrar Panel</button>
+
+    <div id="panelConfiguracion">
+        <h2>Panel de Configuración</h2>
+
+        <label for="selectorTema">Cambiar Tema:</label>
+        <select id="selectorTema">
+            <option value="white">Claro</option>
+            <option value="black">Oscuro</option>
+            <option value="blue">Azul</option>
+        </select>
+
+        <br><br>
+
+        <label for="entradaTitulo">Actualizar Título:</label>
+        <input type="text" id="entradaTitulo" >
+
+        <br><br>
+
+        <label>
+            <input type="checkbox" id="habilitarComentarios">
+            Habilitar Área de Comentarios
+        </label>
+        <br>
+        <textarea id="areaComentarios" disabled></textarea>
+
+        <br><br>
+
+        <h3>Lista Dinámica</h3>
+        <input type="text" id="entradaLista" placeholder="Nuevo elemento">
+        <button id="botonAgregar">Agregar</button>
+
+        <ul id="listaDinamica">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+    </div>
+
+    <script>
+        const botonPanel = document.getElementById('botonPanel');
+        const panelConfiguracion = document.getElementById('panelConfiguracion');
+
+        botonPanel.addEventListener('click', () => {
+            if (panelConfiguracion.style.display === 'none' || panelConfiguracion.style.display === '') {
+                panelConfiguracion.style.display = 'block';
+                botonPanel.textContent = 'Ocultar Panel';
+            } else {
+                panelConfiguracion.style.display = 'none';
+                botonPanel.textContent = 'Mostrar Panel';
+            }
+        });
+
+        const selectorTema = document.getElementById('selectorTema');
+        selectorTema.addEventListener('change', (evento) => {
+            document.body.style.backgroundColor = evento.target.value;
+        });
+
+        const entradaTitulo = document.getElementById('entradaTitulo');
+        const tituloPrincipal = document.getElementById('tituloPrincipal');
+
+        entradaTitulo.addEventListener('input', (evento) => {
+            tituloPrincipal.textContent = evento.target.value || 'Título de la Página';
+        });
+
+        const habilitarComentarios = document.getElementById('habilitarComentarios');
+        const areaComentarios = document.getElementById('areaComentarios');
+
+        habilitarComentarios.addEventListener('change', (evento) => {
+            areaComentarios.disabled = !evento.target.checked;
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="entrar()">
+    <!-- <h1 id="titulo" onclick=mostrar(this)>Evento ommouseOver y OnMouseOut</h1> -->
+<br>
+    <br>
+    <!-- Nombre: <input type="text" onchange="convertir(this)"> -->
+
+    <!-- <h1 id="titulo" onmouseover="rojo(this)" onmouseout="azul(this)">Evento ommouseOver y OnMouseOut</h1> -->
+
+    <!-- <h1 id="titulo">Evento Onfocus y onblur</h1>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <br><br>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"> -->
+
+    <!-- <h1 id="titulo"> Eventos AddListener</h1>
+    Nombre: <input type="text" id="nombre">
+    <br><br>
+    Apellido: <input type="text" id="apellido"> -->
+
+    <form action="">
+        Nombre: <input type="text" id="nombre">
+    <br><br>
+        Apellido: <input type="text" id="apellido"> 
+    </form>
+<script>
+    //function entrar(){
+        //alert("entrando a la pagina web");
+        //Cookies
+        //Son archivos que guardan informacion cuando se carga la pagina por primera vez
+
+        //verificar que las cookies esten abilitadas en el navegador 
+
+       // let texto = '';
+        //if(navigator.cookieEnabled){
+            //texto = 'Las cookies estan habilidas';
+        //}else{
+           // texto = 'Coodies estan innhabilitadas'
+        //}
+
+        //document. getElementById('mostrar').innerHTML = texto;
+        //formado por una llave y su respectiva valor
+    //}
+
+    //function convertir(input){
+        //input.value = input.value.toUpperCase();
+    //}
+
+    //function rojo(titulo){
+        //titulo.style.color = 'red';
+    //}
+    //function azul(titulo){
+       // titulo.style.color = 'blue' ;   }
+
+      // function cambiar(elementInput){
+       // elementInput.style.background = 'yellow';
+       //}
+      // function regresar(elementInput){
+      //  elementInput.style.background = 'white';
+      // }
+
+      //document.getElementById('nombre').addEventListener('focus',(evento)=> {
+        //evento.target.style.background = 'pick';
+     // });//funcon callback
+      //document.getElementById('apellido').addEventListener('focus',(evento)=> {
+        //evento.target.style.background = 'blue';});
+      //document.getElementById('apellido').addEventListener('blur',(evento)=> {
+        //evento.target.style.background = 'black';});
+      //document.getElementById('nombre').addEventListener('blur',(evento) => {
+        //evento.target.style.background = 'white';
+      //});
+      //function cambiar(evento){
+        //let componente = event.target
+        //componente.style.background = 'yellow';
+        //}
+        //function regresar(evento){
+          //  let componente = event.target
+            //componente.style.background = 'white';
+            //}
+    let formulario = document.getElementById('formulario');
+    formulario.addEventListener('focus', (evento) => {
+        evento.target.style.background = '';
+    }, false);
+    formulario.addEventListener('focus', (evento) => {evento.target.style.background = '';}, false );
+
+</script>
+</body>
+</html>

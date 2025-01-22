@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo" onclick=mostrar(this)>Evento Onclick()</h1>
+<button type="button" id="btnMostar" onclick="mostrar()">mostrar</button>
+    <script>
+
+        document.getElementById("titulo").onclick = cambiarTexto; 
+        //Estamos haciendo referencia, no estamos, no llamando a la funcion 
+        //Fuencion de tipo Callback
+        function cambiarTexto(){
+            document.getElementById("titutlo").innerHTML = 'Otro nuevo cambio en el titulo';
+        }
+        /*function mostrar(){//aplastar el boton
+            //document.getElementById("titulo").innerHTML = 'Nuevo texto implementado';
+            console.log(titulo)
+            titulo.innerHTML = "cambiamos el titulo"
+        }*/
+    </script>
+</body>
+</html>
